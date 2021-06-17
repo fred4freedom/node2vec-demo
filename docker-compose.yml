@@ -1,0 +1,10 @@
+version: "3.0"
+services:
+    notebook:
+        image: jupyter/pyspark-notebook:latest
+        volumes:
+            - "./:/home/jovyan/"
+        ports:
+            - "8888:8888"
+        environment: 
+            - "NotebookApp.base_url:/work"
